@@ -3,7 +3,7 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 def get_env_var(name):
-    value = get_env_var(name)
+    value = os.environ.get(name)
     if not value:
         raise ValueError(f"Need to define {name} environment variable")
     return value
