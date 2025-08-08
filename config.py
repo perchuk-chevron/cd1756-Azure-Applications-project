@@ -28,7 +28,9 @@ class Config(object):
     CLIENT_SECRET = get_env_var("CLIENT_SECRET")
 
     AUTHORITY = "https://login.microsoftonline.com/common"  # For multi-tenant app, else put tenant name
-    # AUTHORITY = "https://login.microsoftonline.com/Enter_the_Tenant_Name_Here"
+    # Added preferred URL Scheme for msal authentication
+    PREFERRED_URL_SCHEME = 'https'
+
 
     CLIENT_ID = get_env_var("CLIENT_ID")
 
